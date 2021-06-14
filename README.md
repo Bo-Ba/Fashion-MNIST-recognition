@@ -2,7 +2,7 @@
 # Wstęp
 Rozwiązywane zagadnienie polega na rozpoznaniu obiektu znajdującego się na obrazku i przypisaniu mu jednej z 10 kategorii: T-shirt/top, Trouser, Pullover, Dress, Coat, Sandal, Shirt, Sneaker, Bag, Ankle boot. Każdy z ocenianych przykładów jest obrazem w skali szarości i ma wymiary 28x28. Dane są podzielone na dwie paczki: treningowa zawierająca 60 tys. obrazków i testowa zawierająca 10 tys. obrazków. 
 
-Do wykonania zadania zdecydowałem się użyć biblioteki TensorFlow 2. Biblioteka ta posiada właściwe wszystkie narzędzia potrzebne do zrealizowania zadania, jest bardzo łatwa w użyciu oraz jej użycie jest bardzo powszechne. Co więcej jest ona dobrze zoptymalizowana oraz posiada opcję przeprowadzania obliczeń na GPU co znacząco je przyśpiesza.
+Do wykonania zadania zdecydowałem się użyć biblioteki TensorFlow 2. Biblioteka ta posiada właściwe wszystkie narzędzia potrzebne do zrealizowania zadania, jest bardzo łatwa w użyciu oraz jej użycie jest bardzo powszechne. Co więcej jest ona dobrze zoptymalizowana oraz posiada opcję przeprowadzania obliczeń na GPU, co znacząco je przyśpiesza.
 # Metodologia
 Celem postawionym na początku było uzyskanie dokładności przewidywania na poziomie ok 93%. Przy pierwszym podejściu ze zwykłymi sieciami neuronowymi (Fully connected multi layer neural networks) wyniki były jednak niezadawalające. Stąd wynikła decyzja o zastosowaniu sieci konwolucyjnej. Ostateczny model jest połączeniem warstw konwolucyjnych i zwykłej sieci.
 
