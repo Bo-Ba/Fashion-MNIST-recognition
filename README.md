@@ -84,7 +84,7 @@ Strata = -i=1rozmiar wyjściayi\*logyi
 
 Gdzie yi jest wartością i-tą docelową, yi jest i-tą wartością zwróconą przez model.
 
-Do procesu uczenia wyodrębniłem zbiór walidacyjny, który wynosi 5% zbioru treningowego. Wartość funkcji straty liczonej dla zbioru walidacyjnego po każdej epoce służy do monitorowanie procesu uczenia i zapobieganiu przeuczeniu sieci. Dokładniej, wykorzystałem do tego mechanizm EarlyStopping, który zatrzyma proces uczenia w momencie, kiedy wartość funkcji straty na zbiorze walidacyjnym nie spadnie po 5 epokach uczenia. Wielkość batcha zmieniłem ze standardowych dla biblioteki TensorFlow 32 dna 64.
+Do procesu uczenia wyodrębniłem zbiór walidacyjny, który wynosi 5% zbioru treningowego. Wartość funkcji straty liczonej dla zbioru walidacyjnego po każdej epoce służy do monitorowanie procesu uczenia i zapobieganiu przeuczeniu sieci. Dokładniej, wykorzystałem do tego mechanizm EarlyStopping, który zatrzyma proces uczenia w momencie, kiedy wartość funkcji straty na zbiorze walidacyjnym nie spadnie po 5 epokach uczenia. Wielkość batcha zmieniłem ze standardowych dla biblioteki TensorFlow 32 dna 64. Podczas procesu uczenia warstwy konwolacyjne dopasowują wartości filtrów, tak aby 
 # Wyniki
 Każdy model testowałem pięciokrotnie a następnie wyciągnąłem średnią z uzyskanych wyników.
 
