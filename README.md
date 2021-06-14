@@ -1,4 +1,4 @@
-﻿Klasyfikacja miniatur zdjęć ubrań z wykorzystaniem konwolucyjnej sieci neuronowej.
+#Klasyfikacja miniatur zdjęć ubrań z wykorzystaniem konwolucyjnej sieci neuronowej.
 # Wstęp
 Rozwiązywane zagadnienie polega na rozpoznaniu obiektu znajdującego się na obrazku i przypisaniu mu jednej z 10 kategorii: T-shirt/top, Trouser, Pullover, Dress, Coat, Sandal, Shirt, Sneaker, Bag, Ankle boot. Każdy z ocenianych przykładów jest obrazem w skali szarości i ma wymiary 28x28. Dane są podzielone na dwie paczki: treningowa zawierająca 60 tys. obrazków i testowa zawierająca 10 tys. obrazków. 
 
