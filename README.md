@@ -120,3 +120,13 @@ Aby uruchomić model wystarczy uruchomić plik NeuralNetwork.py. Dane są zacią
 [^1]: https://cs231n.github.io/convolutional-networks/
 [^2]: „Analiza sceny przy użyciu głębokich sieci neuronowych typu yolo” Mateusz MIKOŁAJCZYK, Arkadiusz KWASIGROCH, Michał GROCHOWSKI 
 [^3]: http://fashion-mnist.s3-website.eu-central-1.amazonaws.com/#
+
+# Źródła
+https://machinelearningmastery.com/how-to-develop-a-cnn-from-scratch-for-fashion-mnist-clothing-classification/
+https://machinelearningmastery.com/how-to-choose-loss-functions-when-training-deep-learning-neural-networks/
+https://machinelearningmastery.com/convolutional-layers-for-deep-learning-neural-networks/
+https://cs231n.github.io/convolutional-networks/
+https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53
+https://arxiv.org/pdf/2001.09136v5.pdf
+https://tensorflow.rstudio.com/tutorials/beginners/basic-ml/tutorial_basic_classification/
+https://paperswithcode.com/sota/image-classification-on-fashion-mnist
