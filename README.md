@@ -9,7 +9,7 @@ Celem postawionym na początku było uzyskanie dokładności przewidywania na po
 Po co warstwy konwolucyjne?
 Zadaniem warstw konwolucyjnych jest nałożenie filtrów na obrazek w celu wydobycia z niego pewnych cech. Tymi cechami mogą być np. linie poziome, linie pionowe, koła itp. Wydobycie cech z obrazków pozwala sieci dopasować się znacznie lepiej. Filtry to nic innego jak małe macierze, przez które przemnażany jest obrazek. 
 
-![](Aspose.Words.6590abcc-cf0b-4c13-b049-d4eeaa60e922.001.png)
+![](zad4_msid/images/filtr_przykład.png)
 
 *Źródło: [https://www.youtube.com/watch?v=x_VrgWTKkiM*](https://www.youtube.com/watch?v=x_VrgWTKkiM)*
 
