@@ -82,7 +82,7 @@ Ze względu na to, że rozwiązywany problem jest problemem wielowymiarowej klas
 
 ![Obraz12](https://user-images.githubusercontent.com/61791613/121875386-aebd3500-cd08-11eb-8c85-17fd18191134.png)
 
-Do procesu uczenia wyodrębniłem zbiór walidacyjny, który wynosi 5% zbioru treningowego. Wartość funkcji straty liczonej dla zbioru walidacyjnego po każdej epoce służy do monitorowania procesu uczenia i zapobieganiu przeuczeniu sieci. Dokładniej, wykorzystałem do tego mechanizm EarlyStopping, który zatrzyma proces uczenia w momencie, kiedy wartość funkcji straty na zbiorze walidacyjnym nie spadnie po 5 epokach uczenia. Wielkość batcha zmieniłem ze standardowych dla biblioteki TensorFlow 32 dna 64. Podczas procesu uczenia warstwy konwolacyjne dopasowują wartości filtrów, tak aby 
+Do procesu uczenia wyodrębniłem zbiór walidacyjny, który wynosi 5% zbioru treningowego. Wartość funkcji straty liczonej dla zbioru walidacyjnego po każdej epoce służy do monitorowania procesu uczenia i zapobieganiu przeuczeniu sieci. Dokładniej, wykorzystałem do tego mechanizm EarlyStopping, który zatrzyma proces uczenia w momencie, kiedy wartość funkcji straty na zbiorze walidacyjnym nie spadnie po 5 epokach uczenia. Wielkość batcha zmieniłem ze standardowych dla biblioteki TensorFlow 32 dna 64. Podczas procesu uczenia warstwy konwolacyjne dopasowują wartości filtrów, tak aby optumalizować działanie sieci. 
 # Wyniki
 Każdy model testowałem pięciokrotnie a następnie wyciągnąłem średnią z uzyskanych wyników.
 
