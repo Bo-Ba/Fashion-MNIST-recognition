@@ -61,7 +61,7 @@ Drugi „blok” sieci konwolacyjncyh ma już 30 filtrów ro rozmiarze 3x3. Jest
 
 Wyjście sieci konwolacyjnej jest wielowymiarowe, więc aby przekazać je do następnej warstwy musimy je spłaszczyć – do tego służy warstwa FLatten.
 
-Kolejną wartswą jest wartswa FC składająca się z 735 neuronów. Jest wiele teorii na to, ile powinno być neuronów w warstwie, natomiast ja zdecydowałem się na liczbę będącą po prostu dzielnikiem poprzedniej warstwy – flatten. Warstwa ta ma być pośrednikiem pomiędzy warstwą spłaszczającą a warstwą wyjściową. Redukcja z 5880 neuronów do 10 neuronów wyjściowych byłaby po prostu z byt duża i sieć uczyłaby się dużo dłużej, i z mniejszą skutecznością.
+Kolejną wartswą jest wartswa FC składająca się z 735 neuronów. Jest wiele teorii na to, ile powinno być neuronów w warstwie, natomiast ja zdecydowałem się na liczbę będącą po prostu dzielnikiem poprzedniej warstwy – flatten. Warstwa ta ma być pośrednikiem pomiędzy warstwą spłaszczającą a warstwą wyjściową. Redukcja z 1470 neuronów do 10 neuronów wyjściowych byłaby po prostu z byt duża i sieć uczyłaby się dużo dłużej, i z mniejszą skutecznością.
 
 Warto też zwrócić uwagę na „warstwy” Dropout. Jest to pierwszy zastosowany przeze mnie mechanizm zapobiegający overfittingowi. Polega on na tym, że neurony są wyłączane z pewnym, zadanym przez nas prawdopodobieństwem. Losowe wyłącznie przy każdym przejściu sprawia, że sieć nie nauczy się danych „na pamięć” zbyt szybko. 
 
