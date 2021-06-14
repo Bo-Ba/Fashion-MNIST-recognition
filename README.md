@@ -9,7 +9,7 @@ Celem postawionym na początku było uzyskanie dokładności przewidywania na po
 Po co warstwy konwolucyjne?
 Zadaniem warstw konwolucyjnych jest nałożenie filtrów na obrazek w celu wydobycia z niego pewnych cech. Tymi cechami mogą być np. linie poziome, linie pionowe, koła itp. Wydobycie cech z obrazków pozwala sieci dopasować się znacznie lepiej. Filtry to nic innego jak małe macierze, przez które przemnażany jest obrazek. 
 
-![](./zad4_msid/images/filtr_przykład.png)
+![filtr_przykład](https://user-images.githubusercontent.com/61791613/121871728-b8dd3480-cd04-11eb-8478-cc1c03299368.png)
 
 *Źródło: [https://www.youtube.com/watch?v=x_VrgWTKkiM*](https://www.youtube.com/watch?v=x_VrgWTKkiM)*
 
@@ -17,7 +17,7 @@ Zadaniem warstw konwolucyjnych jest nałożenie filtrów na obrazek w celu wydob
 
 Wg. literatury[^1] najbardziej odpowiednimi rozmiarami dla filtrów są 3x3 lub 5x5. Proces nakładanie filtra polega na przesuwania okna po obszarze obrazu i dla każdego środkowego piksela z okna liczona jest nowa wartość. Nową wartość otrzymujemy poprzez pomnożenie pikseli z okna przez wartości z filtra i zsumowanie ich.
 
-![](Aspose.Words.6590abcc-cf0b-4c13-b049-d4eeaa60e922.002.png)
+![filtr_gif](https://user-images.githubusercontent.com/61791613/121871785-cb576e00-cd04-11eb-87d6-d200a421460a.gif)
 
 *Źródło: https://towardsdatascience.com/intuitively-understanding-convolutions-for-deep-learning-1f6f42faee1*
 
@@ -25,13 +25,13 @@ Hiperparametry sieci konwolucyjnej
 
 Padding – jak widać na wizualizacji powyżej nakładając filtr tracimy oryginalny wymiar obrazu. Aby tego uniknąć stosuje się sztuczne wypełnienie pikselami o wartości 0.
 
-![konwolucyjne sieci neuronowe - padding](Aspose.Words.6590abcc-cf0b-4c13-b049-d4eeaa60e922.003.png)
+![padding](https://user-images.githubusercontent.com/61791613/121871832-dad6b700-cd04-11eb-92a2-f739380d6a46.gif)
 
 *Źródło: https://towardsdatascience.com/intuitively-understanding-convolutions-for-deep-learning-1f6f42faee1*
 
 Strides – czyli wartość o jaką filtr przeskakuje po danym obszarze.
 
-![](Aspose.Words.6590abcc-cf0b-4c13-b049-d4eeaa60e922.004.png)
+![strides](https://user-images.githubusercontent.com/61791613/121871880-e9bd6980-cd04-11eb-92e8-1db27c8d5e2d.gif)
 
 *Źródło: https://towardsdatascience.com/intuitively-understanding-convolutions-for-deep-learning-1f6f42faee1*
 
@@ -39,17 +39,17 @@ Rozmiar filtra – można go zdefiniować, jednak jak pisałem wyżej, najbardzi
 
 Ważnym aspektem jest to, że warstwa konwolucyjna może (a prawie zawsze tak jest) składać się z wielu filtrów. Oznacza to, że wynik na wyjściu tej warstwy będzie trójwymiarowy (w przypadku naszego zadania) i będzie wynosił 28x28xF, gdzie F – liczba użytych filtrów.
 
-![](Aspose.Words.6590abcc-cf0b-4c13-b049-d4eeaa60e922.005.png)
+![wszystkieflitry](https://user-images.githubusercontent.com/61791613/121871920-f8a41c00-cd04-11eb-9542-01a930666d31.png)
 
 *Źródło: https://brilliant.org/wiki/convolutional-neural-network/*
 
 Pooling layers – Warstwy konwolucyjne często generują podobne wartości dla sąsiednich pikseli, co zwykle jest zbędną informacją. Zadaniem „poolingu” jest wybranie wartości najbardziej istotnych z danego obszaru. Zabieg ten zmniejsza nam również wielkość obrazu, co w przypadku dużej wielowymiarowości danych na wyjściu warstwy konwolucyjnej znacząco przyspiesza obliczenia. W skrócie, polega to na zmapowaniu kilku pikseli z obszaru np. 2x2 na jeden piksel. Są różne techniki, ale najczęściej używane jest wybieranie największej wartość z danego obszaru lub liczenie średniej z obszaru. 
 
-![max pooling example](Aspose.Words.6590abcc-cf0b-4c13-b049-d4eeaa60e922.006.png)
+![pooling](https://user-images.githubusercontent.com/61791613/121871961-0659a180-cd05-11eb-855d-f12d1d25af70.gif)
 
 
 ### Model
-![](Aspose.Words.6590abcc-cf0b-4c13-b049-d4eeaa60e922.007.png)
+![model](https://user-images.githubusercontent.com/61791613/121872041-1bcecb80-cd05-11eb-92c2-fc7c94e365ae.png)
 
 Na powyższym wycinku kodu znajduje się przygotowany przeze mnie model, który chciałbym teraz omówić.
 
@@ -68,13 +68,13 @@ Warto też zwrócić uwagę na „warstwy” Dropout. Jest to pierwszy zastosowa
 Jako funkcji aktywacji używam ReLu, jest to chyba najpopularniejsza funkcja, która wprowadza nieliniowość do naszego modelu. Jako funkcja aktywacji na ostatniej warstwie została użyta funkcja softmax, ze względu na to, że chcę otrzymać predykcję, a więc wartości z przedziału 0 – 1.
 ### Dane
 
-![](Aspose.Words.6590abcc-cf0b-4c13-b049-d4eeaa60e922.008.png)
+![dane](https://user-images.githubusercontent.com/61791613/121872083-25f0ca00-cd05-11eb-9fb6-97fa598a7941.png)
 
 Ze względu na to, że używam warstw konwolacyjnych w których jest zawarty proces ekstrakcji cech postanowiłem nie dokonywać dużych zmian na zbiorze wejściowym. Jedyne co robię to standaryzuję dane dzieląc wartości pikseli przez 255. Operacja reshape jest niezbędna ze względu na wartwy konwolacyjne, które oczekują takiego formatu danych. Metoda to\_categorical zamienia wartości etykiet na wartości binarne przyporządkowane każdej kategorii np. dla label’a 9 dostaniemy 
 [0, 0, 0, 0, 0, 0, 0, 0, 0, 1].
 ### Uczenie
 
-![](Aspose.Words.6590abcc-cf0b-4c13-b049-d4eeaa60e922.009.png)
+![uczenie](https://user-images.githubusercontent.com/61791613/121872181-428d0200-cd05-11eb-91be-cfad39531d65.png)
 
 Jako algorytmu optymalizującego użyłem Adaptive Moment Estimation (Adam). Jest on chyba najpopularniejszym teraz algorytmem optymalizacji. „Algorytm określa wartości współczynnika uczenia na podstawie średniej oraz wariancji gradientu. Następnie parametry aktualizowane są wykorzystując odpowiadające im współczynniki uczenia.”[^2]
 
