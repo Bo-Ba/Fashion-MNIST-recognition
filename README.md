@@ -80,9 +80,7 @@ Jako algorytmu optymalizującego użyłem Adaptive Moment Estimation (Adam). Jes
 
 Ze względu na to, że rozwiązywany problem jest problemem wielowymiarowej klasyfikacji, jako funkcji straty używam caterogical\_crossentropy, która dana jest wzorem:
 
-Strata = -i=1rozmiar wyjściayi\*logyi
-
-Gdzie yi jest wartością i-tą docelową, yi jest i-tą wartością zwróconą przez model.
+![Obraz12](https://user-images.githubusercontent.com/61791613/121875386-aebd3500-cd08-11eb-8c85-17fd18191134.png)
 
 Do procesu uczenia wyodrębniłem zbiór walidacyjny, który wynosi 5% zbioru treningowego. Wartość funkcji straty liczonej dla zbioru walidacyjnego po każdej epoce służy do monitorowanie procesu uczenia i zapobieganiu przeuczeniu sieci. Dokładniej, wykorzystałem do tego mechanizm EarlyStopping, który zatrzyma proces uczenia w momencie, kiedy wartość funkcji straty na zbiorze walidacyjnym nie spadnie po 5 epokach uczenia. Wielkość batcha zmieniłem ze standardowych dla biblioteki TensorFlow 32 dna 64. Podczas procesu uczenia warstwy konwolacyjne dopasowują wartości filtrów, tak aby 
 # Wyniki
