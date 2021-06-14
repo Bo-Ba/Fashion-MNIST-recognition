@@ -53,7 +53,7 @@ Pooling layers – Warstwy konwolucyjne często generują podobne wartości dla 
 
 Na powyższym wycinku kodu znajduje się przygotowany przeze mnie model, który chciałbym teraz omówić.
 
-Jest to model sekwencjny, który składa się z 7 warstw: wejściowej, czterech konwolacyjnych, jednej warstwy Fully Connected (FC) i warstwy wyjściowej.
+Jest to model sekwencjny, który składa się z 6 warstw: czterech konwolacyjnych, jednej warstwy Fully Connected (FC) i warstwy wyjściowej.
 
 Pierwsze dwie warstwy to warstwy konwolacyjne z 15 filtrami o rozmiarze 3x3. W literaturze często można przeczytać, że wymiary danych wyjściowych do warstwy powinny być takie same jak wymiary wejściowe, dlatego zdecydowałem się na użycie wcześniej opisywanego paddingu. Podczas pracy z siecią, testy potwierdzały tę teorię i kiedy rozmiary obrazków po przejściu przez warstwy się zmieniały wyniki sieci były gorsze. Inspirując się pracą: <https://arxiv.org/pdf/2001.09136v5.pdf> oraz innymi dostępnymi w Internecie zastosowałem dwie sieci konwolacyjne po sobie. Na podstawie tej samej pracy próbowałem również ograniczyć liczbę Pooling Layers do jednej, występującej tylko po drugim bloku wartsw konwolacyjncyh. Pomimo tego, że pooling niesie ze sobą sporo plusów, to sądzę, że stosując pooling zbyt często (np. po każdym bloku warstw konwolacyjnych) tracimy część danych i informacji o ocenianym obiekcie. Jednak z tego rozwiązania zrezygnowałem co opiszę w sekcji wyniki. 
 
