@@ -15,7 +15,7 @@ Zadaniem warstw konwolucyjnych jest nałożenie filtrów na obrazek w celu wydob
 
 
 
-Wg. literatury[^1] najbardziej odpowiednimi rozmiarami dla filtrów są 3x3 lub 5x5. Proces nakładanie filtra polega na przesuwania okna po obszarze obrazu i dla każdego środkowego piksela z okna liczona jest nowa wartość. Nową wartość otrzymujemy poprzez pomnożenie pikseli z okna przez wartości z filtra i zsumowanie ich.
+Wg. literatury[^1] najbardziej odpowiednimi rozmiarami dla filtrów są 3x3 lub 5x5. Proces nakładania filtra polega na przesuwania okna po obszarze obrazu i dla każdego środkowego piksela z okna liczona jest nowa wartość. Nową wartość otrzymujemy poprzez pomnożenie pikseli z okna przez wartości z filtra i zsumowanie ich.
 
 ![filtr_gif](https://user-images.githubusercontent.com/61791613/121871785-cb576e00-cd04-11eb-87d6-d200a421460a.gif)
 
