@@ -111,7 +111,7 @@ Pomimo tego, że model M2 osiągnął minimalnie lepszy wynik trzeba zauważyć,
 
 Jak można zaobserwować „rozstrzał” na modelu bez dodatkowego Poolingu jest większy. 
 
-Na ostateczny wybór modelu miał czas uczenia jednej epoki, dokładność osiągnięta w próbach oraz stabilność.   
+Na ostateczny wybór modelu miał wpływ czas uczenia jednej epoki, dokładność osiągnięta w próbach oraz stabilność.   
 
 W zestawieniu załączonym do zadania[^3] nie ma metody odpowiadającej moje, jednak model zaproponowany przeze mnie osiąga lepsze wyniki od każdej z przedstawionych. 
 
