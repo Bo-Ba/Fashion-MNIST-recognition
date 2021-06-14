@@ -21,7 +21,7 @@ Wg. literatury[^1] najbardziej odpowiednimi rozmiarami dla filtrów są 3x3 lub 
 
 *Źródło: https://towardsdatascience.com/intuitively-understanding-convolutions-for-deep-learning-1f6f42faee1*
 
-Hiperparametry sieci konwolucyjnej
+### Hiperparametry sieci konwolucyjnej
 
 Padding – jak widać na wizualizacji powyżej nakładając filtr tracimy oryginalny wymiar obrazu. Aby tego uniknąć stosuje się sztuczne wypełnienie pikselami o wartości 0.
 
